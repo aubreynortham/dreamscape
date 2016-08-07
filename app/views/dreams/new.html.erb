@@ -1,0 +1,15 @@
+<%= form_for :dream, url: dreams_path do |f| %>
+<div>
+  <p>Give your entry a short title or descriptor: (limit 100 characters)</p>
+  <%= f.text_field :title %>
+</div>
+
+<div>
+  <p>Entry:</p>
+  <%= f.text_area :entry %>
+</div>
+
+<div>
+  <%= f.submit "CREATE ENTRY" %>
+</div>
+<% end %>
