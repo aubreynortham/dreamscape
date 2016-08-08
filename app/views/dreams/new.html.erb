@@ -1,15 +1,25 @@
-<%= form_for :dream, url: dreams_path do |f| %>
-<div>
-  <p>Give your entry a short title or descriptor: (limit 100 characters)</p>
-  <%= f.text_field :title %>
-</div>
+<nav>
+  <a href="/dreams">My Dreamscape</a> |
+  <a href="/dreams/new" class="active">New Dream</a> |
+  <a href="#">Collective</a> |
+  <a href="/explore">Explore</a> |
+  <a href="#">Sign Out</a>
+</nav>
 
-<div>
-  <p>Entry:</p>
-  <%= f.text_area :entry %>
-</div>
+<div class="wrapper">
+  <%= form_for :dream, url: dreams_path do |f| %>
+  <div>
+    <p>Give your entry a short title or descriptor: (limit 25 characters)</p>
+    <%= f.text_field :title %>
+  </div>
 
-<div>
-  <%= f.submit "CREATE ENTRY" %>
+  <div>
+    <p>Entry:</p>
+    <%= f.text_area :entry %>
+  </div>
+
+  <div>
+    <%= f.submit "CREATE ENTRY" %>
+  </div>
+  <% end %>
 </div>
-<% end %>

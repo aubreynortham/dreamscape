@@ -1,4 +1,26 @@
-<h1><%= @dream.title %></h1>
+<nav>
+  <a href="/dreams" class="active">My Dreamscape</a> |
+  <a href="/dreams/new">New Dream</a> |
+  <a href="#">Collective</a> |
+  <a href="/explore">Explore</a> |
+  <a href="#">Sign Out</a>
+</nav>
 
-<p><%= @dream.entry %></p>
-  
+<div class="wrapper">
+
+  <h1><%= @dream.title %></h1>
+  <p><%= @dream.entry %></p>
+
+  <% if @dream.tags.length > 0 %>
+    <h4>Tags</h4>
+      <% @dream.tags.each do |tag| %>
+      <%= link_to tag.classification.name, classification_path(tag.classification) %>
+      <% end %>
+  <% end %>
+
+  <%= form_for [@dream, @tag] do |f| %>
+    <%= text_field_tag :classification_name %>
+    <%= f.submit "Create Tag" %>
+  <% end %>
+
+</div>

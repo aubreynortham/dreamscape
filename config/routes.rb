@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+  get 'explore', to: 'explore#get_explore'
 end

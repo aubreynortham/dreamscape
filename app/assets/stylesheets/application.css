@@ -8,9 +8,9 @@
 }
 body {
   margin: 0;
-  background: #000;
+  background-color: rgb(37, 37, 37);
 }
-fullvid {
+#fullvid {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -29,10 +29,15 @@ h1, h4 {
   font-weight: 700;
   text-shadow: 1px 1px 1px rgb(38, 38, 38);
   text-transform: uppercase;
+  color: white;
+}
+p {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  color: rgb(194, 194, 194);
+  line-height: 1.75em;
 }
 button {
-  text-transform: uppercase;
-  color: white;
   background-color: rgb(63, 47, 68);
   border: none;
   padding: 10px 20px;
@@ -40,4 +45,51 @@ button {
 }
 .welcome {
   text-align: center;
+}
+.welcome a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+nav {
+  background-image: url("http://n2canada.com/blog/wp-content/uploads/2009/08/08112009066.jpg");
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: auto;
+  color: white;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 10px solid rgb(63, 47, 68);
+}
+nav a {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-align: center;
+}
+.active {
+  color: white;
+  text-shadow: 1px 1px 1px rgb(38, 38, 38);
+}
+.header {
+  text-align: center;
+  background-image: url("http://sofiaglobe.com/wp-content/uploads/2012/11/storm-clouds-photo-mattnolt-e1353427785107.jpg");
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.wrapper {
+  width: 85%;
+  margin: 50px auto;
 }

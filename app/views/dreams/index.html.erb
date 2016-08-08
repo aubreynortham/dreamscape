@@ -1,41 +1,20 @@
-<% @dreams.each do |dream| %>
-<div class="dreambox"><%= link_to dream.title, dream_path(dream) %></div>
+<nav>
+  <a href="/dreams" class="active">My Dreamscape</a> |
+  <a href="/dreams/new">New Dream</a> |
+  <a href="#">Collective</a> |
+  <a href="/explore">Explore</a> |
+  <a href="#">Sign Out</a>
+</nav>
 
-<p>
+<div class="dreamsbody">
+  <div class="wrapper">
 
-The Google Hosted Libraries is a stable, reliable, high-speed, globally available content distribution network for the most popular, open-source JavaScript libraries.
+    <% @dreams.each do |dream| %>
+    <div class="dreambox"><%= link_to dream.title, dream_path(dream) %></div>
 
-Google works directly with the key stakeholders for each library effort and accepts the latest versions as they are released.
+    <% end %>
 
-Libraries
+    <p>It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.It's the position:fixed that's most important, because it takes the top div from the normal page flow and fixes it at it's pre-determined position. It's also important to use the padding-top:1em because otherwise the term-defs div would start right under the top div. The background and width are there to cover the contents of the term-defs div as they scroll under the top div.</p>
 
-To load a hosted library, copy and paste the HTML snippet for that library (shown below) in your web page. For instance, to load jQuery, embed the <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> snippet in your web page.
-
-We recommend that you load libraries from the CDN via HTTPS, even if your own website only uses HTTP. Nowadays, performance is fast, and caching works just the same. The CDN's files are served with CORS and Timing-Allow headers and allowed to be cached for 1 year.
-</p>
-
-<p>
-
-The Google Hosted Libraries is a stable, reliable, high-speed, globally available content distribution network for the most popular, open-source JavaScript libraries.
-
-Google works directly with the key stakeholders for each library effort and accepts the latest versions as they are released.
-
-Libraries
-
-To load a hosted library, copy and paste the HTML snippet for that library (shown below) in your web page. For instance, to load jQuery, embed the <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> snippet in your web page.
-
-We recommend that you load libraries from the CDN via HTTPS, even if your own website only uses HTTP. Nowadays, performance is fast, and caching works just the same. The CDN's files are served with CORS and Timing-Allow headers and allowed to be cached for 1 year.
-</p>
-
-<p>
-
-The Google Hosted Libraries is a stable, reliable, high-speed, globally available content distribution network for the most popular, open-source JavaScript libraries.
-
-Google works directly with the key stakeholders for each library effort and accepts the latest versions as they are released.
-
-Libraries
-
-To load a hosted library, copy and paste the HTML snippet for that library (shown below) in your web page. For instance, to load jQuery, embed the <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> snippet in your web page.
-
-We recommend that you load libraries from the CDN via HTTPS, even if your own website only uses HTTP. Nowadays, performance is fast, and caching works just the same. The CDN's files are served with CORS and Timing-Allow headers and allowed to be cached for 1 year.
-</p>
+  </div>
+</div>
