@@ -20,14 +20,11 @@ body {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url("http://imgur.com/a/5vRbB") no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
 }
 h1, h4 {
   font-family: 'Quattrocento Sans', sans-serif;
   font-weight: 700;
-  text-shadow: 1px 1px 1px rgb(38, 38, 38);
+  text-shadow: 1px 1px 3px rgb(38, 38, 38);
   text-transform: uppercase;
   color: white;
 }
@@ -40,11 +37,12 @@ p {
 button {
   background-color: rgb(63, 47, 68);
   border: none;
-  padding: 10px 20px;
-  margin: 20px;
+  padding: 20px 25px;
+  margin: 30px;
 }
 .welcome {
   text-align: center;
+  margin: 150px auto;
 }
 .welcome a {
   text-transform: uppercase;
@@ -53,6 +51,18 @@ button {
   font-family: 'Quattrocento Sans', sans-serif;
   font-weight: 400;
   letter-spacing: .5px;
+  font-size: 1.5em;
+}
+.welcome h1 {
+  font-size: 5em;
+  letter-spacing: 10px;
+}
+.welcome p {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  text-shadow: 1px 1px 1px rgb(38, 38, 38);
+  letter-spacing: 1px;
+  margin: 50px 0px 0px 0px;
 }
 nav {
   background-image: url("http://n2canada.com/blog/wp-content/uploads/2009/08/08112009066.jpg");
