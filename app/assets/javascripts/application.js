@@ -14,3 +14,54 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+//sticky nav
+$(document).ready(function() {
+var stickyNavTop = $('nav').offset().top;
+
+var stickyNav = function(){
+var scrollTop = $(window).scrollTop();
+
+if (scrollTop > stickyNavTop) {
+    $('nav').addClass('sticky');
+} else {
+    $('nav').removeClass('sticky');
+}
+};
+
+stickyNav();
+
+$(window).scroll(function() {
+  stickyNav();
+});
+});
+
+
+//video features
+var vid = document.getElementById("fullvid");
+var pauseButton = document.querySelector("#tbd button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed
+vid.pause();
+// to capture IE10
+vidFade();
+});
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})

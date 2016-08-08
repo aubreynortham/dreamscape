@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dreamscape</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Dreamscape</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
 
-  <body>
+<body>
+  <div class="header">
+    <h4>Dreamscape</h4>
+  </div>
+  <nav>
+    Navigation
+  </nav>
+  <div class="content">
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
