@@ -103,3 +103,29 @@ nav a {
   width: 85%;
   margin: 50px auto;
 }
+.explore_intro {
+  border-bottom: 2px solid rgb(194, 194, 194);
+  padding: 20px 0px;
+  margin: 0px 0px 50px 0px;
+}
+.bullet {
+  color: rgb(95, 60, 106);
+  font-family: sans-serif;
+}
+.explore_links{
+  text-align: center;
+}
+.resource {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  text-decoration: none;
+  color: rgb(194, 194, 194);
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  display: block;
+  transition: transform 0.3s;
+}
+.resource:hover {
+  transform: scale(1.1);
+}
