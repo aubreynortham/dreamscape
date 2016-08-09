@@ -43,4 +43,4 @@ $('.navlink').click(function() {
     $(this).addClass('active');
 });
 
-//video features
+//transition code

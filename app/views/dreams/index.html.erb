@@ -28,9 +28,6 @@
   <div class="bg-layer"></div>
 </div>
 
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-
 <% @dreams.each do |dream| %>
 <div class="dreambox"><%= link_to dream.title, dream_path(dream) %></div>
 
