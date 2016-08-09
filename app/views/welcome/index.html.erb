@@ -4,7 +4,8 @@
 
 <div class="welcome">
   <h1>Dreamscape</h1>
-  <button><a href="#">Sign up / Login</a></button>
+  <button><%= link_to "Sign Up", new_user_registration_path %></button>
+  <button><%= link_to "Login", new_user_session_path %></button>
   <button><a href="/dreams">See a Demo</a></button>
   <p>Capture your dreams.<br>Revisit them in all their natural, nonsensical patterns.<br>Sleep. Dream. Repeat.</p>
 </div>
