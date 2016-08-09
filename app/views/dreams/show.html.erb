@@ -3,16 +3,23 @@
   <a href="/dreams/new">New Dream</a> |
   <a href="#">Collective</a> |
   <a href="/explore">Explore</a> |
-  <a href="#">Sign Out</a>
+  <a href="/signout">Sign Out</a>
 </nav>
 
 <div class="wrapper">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <h1><%= @dream.title %></h1>
   <p><%= @dream.entry %></p>
 
+  <% if current_user && current_user == @dream.user %>
+    <p class="linebutton"><%= link_to "Edit Dream", edit_dream_path(@dream) %></p>
+    <p class="linebutton"><%= link_to "Delete Dream", dream_path(@dream), method: :delete %></p>
+  <% end %>
+
+  <h4>Tags</h4>
   <% if @dream.tags.length > 0 %>
-    <h4>Tags</h4>
       <% @dream.tags.each do |tag| %>
       <%= link_to tag.classification.name, classification_path(tag.classification) %>
       <% end %>

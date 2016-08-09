@@ -33,6 +33,7 @@ p {
   font-weight: 400;
   color: rgb(194, 194, 194);
   line-height: 1.75em;
+  font-size: 20px;
 }
 button {
   background-color: rgb(63, 47, 68);
@@ -122,7 +123,7 @@ nav a {
 }
 .resource {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 25px;
   line-height: 2.5em;
   text-decoration: none;
   color: rgb(194, 194, 194);
@@ -138,7 +139,7 @@ nav a {
   background-color: rgb(63, 47, 68);
   border: none;
   padding: 10px 40px;
-  margin: 5px 0px 40px 0px;
+  margin: 25px 0px 40px 0px;
   transition: box-shadow 0.2s, transform 0.2s;
   color: white;
   font-family: 'Quattrocento Sans', sans-serif;
@@ -155,13 +156,13 @@ nav a {
 }
 .linebutton a {
   border-top: 2px solid rgb(99, 66, 105);
-  text-transform: uppercase;
   margin: 10px 10px 0px 0px;
   text-decoration: none;
   color: rgb(99, 66, 105);
   padding: 10px 0px 0px 0px;
   font-family: 'Quattrocento Sans', sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 .linebutton a:hover {
   font-weight: 700;
@@ -190,17 +191,6 @@ Primary style
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "PT Sans", sans-serif;
-  color: #242322;
-  background-color: #ffffff;
-}
-
 a {
   color: #a5c4bc;
   text-decoration: none;
@@ -218,10 +208,10 @@ Patterns - reusable parts of our design
   height: 200px;
   width: 200px;
   vertical-align: middle;
-  font-size: 1.4rem;
-  letter-spacing: .15em;
+  font-size: 1.2rem;
   color: #ffffff;
-  font-weight: 700;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   background-color: rgb(63, 47, 68);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -235,18 +225,6 @@ Patterns - reusable parts of our design
   transform: translate(10px, 10px);
 }
 
-
-/* --------------------------------
-
-Typography
-
--------------------------------- */
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 5rem;
-  }
-}
 
 /* --------------------------------
 

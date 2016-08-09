@@ -1,4 +1,4 @@
 class Classification < ApplicationRecord
-  belongs_to :dream
-  belongs_to :tag
+  has_many :tags
+  has_many :dreams, through: :tags
 end

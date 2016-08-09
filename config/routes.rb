@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'explore', to: 'explore#get_explore'
+  get 'signout', to: 'signout#get_signout'
 end

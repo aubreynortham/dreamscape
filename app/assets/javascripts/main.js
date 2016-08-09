@@ -19,10 +19,14 @@ jQuery(document).ready(function($){
 	});
 
 	//open modal window
-	modalTrigger.on('click', function(event){	
+	modalTrigger.on('click', function(event){
 		event.preventDefault();
+		var dreamId = ($(this).attr("data-dream-id"));
 		transitionLayer.addClass('visible opening');
 		var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
+		var modalWindow = $("div[data-dream-id='"+ dreamId +"'].cd-modal")
+		// .find("[data-dream-id='"+ dreamId +"']")
+		console.log(modalWindow.html());
 		setTimeout(function(){
 			modalWindow.addClass('visible');
 		}, delay);

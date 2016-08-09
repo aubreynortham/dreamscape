@@ -1,0 +1,14 @@
+<nav>
+  <a href="/dreams">My Dreamscape</a> |
+  <a href="/dreams/new">New Dream</a> |
+  <a href="#">Collective</a> |
+  <a href="/explore">Explore</a> |
+  <a href="/signout" class="active">Sign Out</a>
+</nav>
+
+<div class="wrapper">
+  <% if current_user %>
+  <p>Are you sure you want to log out of your account as <%= current_user.email %> ?</p>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "submit" %>
+  <% end %>
+</div>

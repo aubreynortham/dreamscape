@@ -3,33 +3,31 @@
   <a href="/dreams/new">New Dream</a> |
   <a href="#">Collective</a> |
   <a href="/explore">Explore</a> |
-  <a href="#">Sign Out</a>
+  <a href="/signout">Sign Out</a>
 </nav>
 
 
 
 <main class="cd-main-content">
   <div class="center">
-    <div class="dreambox"><a href="#0" class="cd-btn cd-modal-trigger">Dream Description</a></div>
-    <div class="dreambox"><a href="#0" class="cd-btn cd-modal-trigger">Dream Description2</a></div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <% @dreams.each do |dream| %>
+    <div class="dreambox"><a data-dream-id="<%= dream.id %>" href="<%=dream_path(dream)%>" class="cd-btn cd-modal-trigger"><%= dream.title %></a></div>
+    <% end %>
   </div>
 </main>
 
-<div class="cd-modal">
+<% @dreams.each do |dream| %>
+<div data-dream-id="<%= dream.id %>" class="cd-modal">
   <div class="modal-content">
-    <h1>Placeholder Dream Entry</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
-    </p>
+    <h1><%= dream.title %></h1>
+    <p><%= dream.entry %></p>
   </div>
-  <a href="#0" class="modal-close">Close</a>
+  <a href="<%=dreams_path%>" class="modal-close">Close</a>
 </div>
+<% end %>
 
 <div class="cd-transition-layer">
   <div class="bg-layer"></div>
 </div>
-
-<% @dreams.each do |dream| %>
-<div class="dreambox"><%= link_to dream.title, dream_path(dream) %></div>
-
-<% end %>
