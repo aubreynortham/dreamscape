@@ -31,28 +31,20 @@
     <%= render dream.tags %>
     <% end %>
 
+    <!-- create tags -->
     <h4>Create a tag:</h4>
     <%= form_for [dream, dream.tags.build] do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.submit %>
     <% end %>
+    
     <p>
-
       <% if current_user && current_user == dream.user %>
       <p class="linebutton"><%= link_to "Edit Dream", edit_dream_path(dream) %></p>
       <p class="linebutton"><%= link_to "Delete Dream", dream_path(dream), method: :delete, data: { confirm: 'Are you sure you want to delete this dream?' } %></p>
       <% end %>
     </p>
-
-    <!-- option to create tags -->
-    <%# @dreams.each do |dream| %>
-    <%# form_for [dream, dream.tags.build] do |f| %>
-    <%# f.label :name %>
-    <%# f.text_field :name %>
-    <%# f.submit %>
-    <%#end %>
-    <%# end %>
 
     <!-- close out of the modal -->
   </div>
