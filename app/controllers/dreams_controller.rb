@@ -8,21 +8,12 @@ class DreamsController < ApplicationController
     end
   end
 
-  def edit
-    @dream = Dream.find(params[:id])
-    @classification = @dream.classifications
-    @tags = @dream.tags
-  end
-
   def new
     @dream = Dream.new
-    @tags = @dream.tags
   end
 
   def create
     @dream = Dream.create(dream_params.merge(user: current_user))
-    @classification = @dream.classifications
-    @tags = @dream.tags
 
     if @dream.save
       flash[:notice] = "New dream entry has been created."
@@ -33,9 +24,12 @@ class DreamsController < ApplicationController
     end
   end
 
+  def edit
+    @dream = Dream.find(params[:id])
+  end
+
   def update
     @dream = Dream.find(params[:id])
-    @classification = @dream.classifications
     @dream.update(dream_params.merge(user:current_user))
     redirect_to dreams_path
   end

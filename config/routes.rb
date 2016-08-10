@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :classifications
   resources :dreams, except: [:show] do
-    resources :tags, only: [:new, :create]
+    resources :tags
   end
 
   root 'welcome#index'

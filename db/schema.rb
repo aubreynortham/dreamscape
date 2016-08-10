@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20160809131605) do
 
-  create_table "classifications", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "dreams", force: :cascade do |t|
     t.string   "title"
     t.text     "entry"
@@ -28,11 +22,10 @@ ActiveRecord::Schema.define(version: 20160809131605) do
   end
 
   create_table "tags", force: :cascade do |t|
+    t.string   "name"
     t.integer  "dream_id"
-    t.integer  "classification_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["classification_id"], name: "index_tags_on_classification_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["dream_id"], name: "index_tags_on_dream_id"
   end
 

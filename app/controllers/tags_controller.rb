@@ -1,18 +1,18 @@
 class TagsController < ApplicationController
-  def new
-    @dream = Dream.find(params[:dream_id])
-    @tag = @dream.tags.new
-  end
 
   def create
     @dream = Dream.find(params[:dream_id])
-    @classification = Classification.find_or_create_by(name: params[:classification_name])
+    @tag = @dream.tags.create(tag_params)
 
-    existing_tag = Tag.find_by(dream: @dream, classification: @classification)
-    unless existing_tag
-      @dream.tags.create(classification: @classification)
+    if @tag.save
+      flash[:notice] = "You've successfully tagged your dream."
+      redirect_to dreams_path
     end
-    redirect_to dream_path(@dream)
+  end
+
+  private
+  def tag_params
+    params.require(:tag).permit(:name)
   end
 
 end
