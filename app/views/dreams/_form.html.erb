@@ -1,0 +1,17 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= form_for @dream do |f| %>
+<div>
+  <p>Give your entry a short title or descriptor: (limit 25 characters)</p>
+  <%= f.text_field :title, :class => "small_entry" %>
+</div>
+
+<div>
+  <p>Entry:</p>
+  <%= f.text_area :entry, :class => "big_entry" %>
+</div>
+
+<div>
+  <%= f.submit "Submit", :class => "submit" %>
+</div>
+<% end %>

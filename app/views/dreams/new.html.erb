@@ -1,27 +1,11 @@
 <nav>
   <a href="/dreams">My Dreamscape</a> |
   <a href="/dreams/new" class="active">New Dream</a> |
-  <a href="#">Collective</a> |
+  <a href="/collective">Collective</a> |
   <a href="/explore">Explore</a> |
   <a href="/signout">Sign Out</a>
 </nav>
 
 <div class="wrapper">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= form_for :dream, url: dreams_path do |f| %>
-  <div>
-    <p>Give your entry a short title or descriptor: (limit 25 characters)</p>
-    <%= f.text_field :title %>
-  </div>
-
-  <div>
-    <p>Entry:</p>
-    <%= f.text_area :entry %>
-  </div>
-
-  <div>
-    <%= f.submit "CREATE ENTRY" %>
-  </div>
-  <% end %>
+  <%= render "form" %>
 </div>

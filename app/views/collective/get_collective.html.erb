@@ -1,20 +1,17 @@
 <nav>
-  <a href="/dreams" class="active">My Dreamscape</a> |
+  <a href="/dreams">My Dreamscape</a> |
   <a href="/dreams/new">New Dream</a> |
-  <a href="/collective">Collective</a> |
+  <a href="/collective" class="active">Collective</a> |
   <a href="/explore">Explore</a> |
-  <a href="#">Sign Out</a>
+  <a href="/signout">Sign Out</a>
 </nav>
 
 
 
 <main class="cd-main-content">
   <div class="center">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <h1>Dreams by Tag: <%= @classification.name %></h1>
     <% @dreams.each do |dream| %>
-    <div class="dreambox"><a data-dream-id="<%= dream.id %>" href="<%=dream_path(dream)%>" class="cd-btn cd-modal-trigger"><%= dream.title %></a></div>
+    <div class="dreambox"><a data-dream-id="<%= dream.id %>" href="#0" class="cd-btn cd-modal-trigger"><%= dream.title %></a></div>
     <% end %>
   </div>
 </main>
@@ -25,8 +22,8 @@
     <h1><%= dream.title %></h1>
     <p><%= dream.entry %></p>
   </div>
-  <a href="<%=dreams_path%>" class="modal-close">Close</a>
-</div>
+    <a href="#0" class="modal-close">Close</a>
+  </div>
 <% end %>
 
 <div class="cd-transition-layer">

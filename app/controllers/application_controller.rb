@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_filter :authenticate_user!, :except => [:welcome, :index, :show, :get_explore]
+  before_filter :authenticate_user!, :except => [:welcome, :show, :get_explore, :get_collective]
 
-  def after_sign_in_path_for(resource)
-    dreams_path
-  end
+
 end

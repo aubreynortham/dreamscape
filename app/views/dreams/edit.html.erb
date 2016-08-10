@@ -1,0 +1,24 @@
+<nav>
+  <a href="/dreams">My Dreamscape</a> |
+  <a href="/dreams/new" class="active">New Dream</a> |
+  <a href="/collective">Collective</a> |
+  <a href="/explore">Explore</a> |
+  <a href="/signout">Sign Out</a>
+</nav>
+
+<div class="wrapper">
+  <%= render "form" %>
+
+  <h4>Tags</h4>
+  <% if @dream.classifications.length > 0 %>
+      <% @dream.classifications.each do |classification| %>
+        <button class="tagbox"><%= link_to classification.name, classification_path(classification) %></button>
+      <% end %>
+  <% end %>
+
+  <%= form_for ([@dream, @classification]) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create Tag" %>
+  <% end %>
+
+</div>

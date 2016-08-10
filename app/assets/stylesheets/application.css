@@ -35,6 +35,28 @@ p {
   line-height: 1.75em;
   font-size: 20px;
 }
+.alert {
+  color: rgb(205, 16, 107);
+}
+.big_entry {
+  width: 90%;
+  height: 200px;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 8px;
+}
+.small_entry {
+  height: 30px;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 8px;
+}
+.big_entry:focus, .small_entry:focus {
+  outline: none;
+  border: 3px solid rgb(205, 16, 107);
+}
 button {
   background-color: rgb(63, 47, 68);
   border: none;
@@ -151,6 +173,7 @@ nav a {
   box-shadow: -5px -5px 0 #98004a;
   transform: translate(8px, 8px);
 }
+
 .linebutton {
   display: inline;
 }
@@ -292,6 +315,16 @@ Modal window
   line-height: 1.6;
   margin: 2em auto;
   max-width: 800px;
+}
+.tagbox {
+  background-color: black;
+  font-size: 15px;
+  padding: 5px 15px;
+  margin: 10px 10px 0px 20px;
+}
+.tagbox:hover {
+  box-shadow: -3px -3px 0 #98004a;
+  transform: translate(3px, 3px);
 }
 .cd-modal .modal-close {
   /* 'X' icon */
