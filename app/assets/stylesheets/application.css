@@ -322,6 +322,10 @@ Modal window
   margin: 10px 10px 0px 20px;
   color: white;
 }
+.tagbox:hover {
+  box-shadow: -3px -3px 0 #98004a;
+  transform: translate(3px, 3px);
+}
 footer {
   border-top: 2px solid rgba(63, 47, 68, .8);
   margin: 10px;

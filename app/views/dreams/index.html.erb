@@ -34,11 +34,10 @@
     <!-- create tags -->
     <h4>Create a tag:</h4>
     <%= form_for [dream, dream.tags.build] do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
+    <%= f.text_field :name, :class => "small_entry" %>
+    <%= f.submit "Create", :class => "submit" %>
     <% end %>
-    
+
     <p>
       <% if current_user && current_user == dream.user %>
       <p class="linebutton"><%= link_to "Edit Dream", edit_dream_path(dream) %></p>
