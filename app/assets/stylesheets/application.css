@@ -402,6 +402,87 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .welcome h1 {
+    font-size: 2em;
+    letter-spacing: 5px;
+  }
+  .welcome p {
+    font-size: 1em;
+    line-height: 1em;
+    text-shadow: 1px 1px 1px rgb(38, 38, 38);
+    letter-spacing: 1px;
+    margin: 20px 5px 0px 5px;
+  }
+  footer p {
+    font-size: .8em;
+  }
+  footer {
+    margin: 5px;
+  }
+  .welcome button {
+    background-color: rgb(63, 47, 68);
+    padding: 10px;
+    margin: 10px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .welcome button:hover {
+    box-shadow: -4px -4px 0 #98004a;
+    transform: translate(4px, 4px);
+  }
+  .linebutton a {
+    margin: 0px 10px 0px 0px;
+    padding: 5px 0px 0px 0px;
+    font-size: .8em;
+  }
+  .small_entry {
+    width: 150px;
+    font-size: 15px;
+    padding: 5px;
+    margin: 0;
+  }
+  .dreambox {
+    display: table;
+    margin: 10px;
+    float: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .dreambox:hover {
+    box-shadow: -4px -4px 0 #98004a;
+    transform: translate(4px, 4px);
+  }
+  .cd-btn {
+    padding: 1.2em 2em;
+    height: 120px;
+    width: 120px;
+    font-size: .8rem;
+  }
+  .explore_intro {
+    padding: 0;
+    margin: 0px 0px 50px 0px;
+  }
+  .explore_intro p {
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+  .bullet {
+    color: rgb(95, 60, 106);
+    font-family: sans-serif;
+  }
+  .explore_links{
+    text-align: center;
+  }
+  .resource {
+    text-align: center;
+    font-size: 15px;
+    line-height: 2em;
+    transition: transform 0.3s;
+  }
+  .resource:hover {
+    transform: scale(1.1);
+  }
+}
+
 /* --------------------------------
 
 Transition Layer
