@@ -27,27 +27,18 @@
 
 development:
   adapter: postgresql
-  encoding: utf8
   database: dreamscape_development
   pool: 5
-  username:
-  password:
+  timeout: 5000
 
-test: &TEST
-  adapter: postgresql
-  encoding: utf8
-  database: dreamscape_test
-  pool: 5
-  username:
-  password:
+  test:
+    adapter: postgresql
+    database: dreamscape_development
+    pool: 5
+    timeout: 5000
 
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: dreamscape_production
-  pool: 5
-  username:
-  password:
-
-cucumber:
-  <<: *TEST
+    production:
+      adapter: postgresql
+      database: dreamscape_production
+      pool: 5
+      timeout: 5000
