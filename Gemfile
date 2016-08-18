@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
-
+gem 'pg'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
+<<<<<<< HEAD
 
 gem 'pg'
 group :production do
@@ -14,6 +15,8 @@ end
 group :development, :test do
   gem 'sqlite3'
 end
+=======
+>>>>>>> 9e50302b0696c0a68dff9794fb67af9d04e4f22d
 # Use Puma as the app server
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

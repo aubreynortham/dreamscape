@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SQLite version 3.x
 #   gem install sqlite3
 #
@@ -42,3 +43,24 @@ development:
       database: dreamscape_production
       pool: 5
       timeout: 5000
+=======
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: db/test
+
+production:
+  <<: *default
+  database: db/production
+>>>>>>> 9e50302b0696c0a68dff9794fb67af9d04e4f22d
