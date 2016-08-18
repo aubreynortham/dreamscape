@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 20160809131605) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "dreams", force: :cascade do |t|
     t.string   "title"
     t.text     "entry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.index ["user_id"], name: "index_dreams_on_user_id"
+    t.index ["user_id"], name: "index_dreams_on_user_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160809131605) do
     t.integer  "dream_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dream_id"], name: "index_tags_on_dream_id"
+    t.index ["dream_id"], name: "index_tags_on_dream_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,8 +45,10 @@ ActiveRecord::Schema.define(version: 20160809131605) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "dreams", "users"
+  add_foreign_key "tags", "dreams"
 end
