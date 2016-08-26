@@ -10,6 +10,8 @@ class TagsController < ApplicationController
     end
   end
 
+  # would add destroy for untagging
+
   private
   def tag_params
     params.require(:tag).permit(:name)

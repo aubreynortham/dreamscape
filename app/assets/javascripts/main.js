@@ -1,3 +1,4 @@
+// excellent use of doc ready since it will wait until rails has rendered the view, which is where your data-dream-id is defined in (dreams/index.html.erb). 
 jQuery(document).ready(function($){
 	//cache some jQuery objects
 	var modalTrigger = $('.cd-modal-trigger'),
@@ -21,6 +22,7 @@ jQuery(document).ready(function($){
 	//open modal window
 	modalTrigger.on('click', function(event){
 		event.preventDefault();
+		// good utilization of custom attributes in html to replace the show functionality that you are bypassing by using the modal states
 		var dreamId = ($(this).attr("data-dream-id"));
 		transitionLayer.addClass('visible opening');
 		var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
