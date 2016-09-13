@@ -1,3 +1,11 @@
+/*
+add this if you don't like the blue focus-halo on buttons
+
+button:focus {
+    outline:none;
+}
+*/
+
 .sticky {
   position: fixed;
   width: 100%;

@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# consider adding some seeds for testing purposes-- i understand that it would be weird if there were 'stock' dreams that appeared to a new user since it would undermine the personal nature of the app

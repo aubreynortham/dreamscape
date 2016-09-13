@@ -13,12 +13,15 @@ class DreamsController < ApplicationController
   end
 
   def create
+    #
     @dream = Dream.create(dream_params.merge(user: current_user))
 
     if @dream.save
+      # YES flashes for better UX
       flash[:notice] = "New dream entry has been created."
       redirect_to dreams_path
     else
+      # is this the only possible error? (empty field)
       flash[:alert] = "Your dream entry needs a title with 25 characters or less."
       render 'new'
     end
